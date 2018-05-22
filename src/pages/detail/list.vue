@@ -20,7 +20,7 @@
         </li>
       </ul>
       <div class="more" v-if="area.hasMore" @click="handleClick(index, $event)">
-        点击查看更多
+        点击查看更多(测试公钥)
       </div>
     </div>
   </div>
