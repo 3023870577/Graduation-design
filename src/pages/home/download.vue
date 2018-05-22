@@ -11,7 +11,7 @@
     name: 'index-download',
     data () {
       return {
-        link: ""
+        link: ''
       }
     },
     methods: {
@@ -20,7 +20,7 @@
       },
       ...mapMutations(['changeDownload'])
     },
-    mounted() {
+    mounted () {
       const ua = window.navigator.userAgent.toLowerCase()
       const isIphone = ua.indexOf('iphone') > -1
       this.link = isIphone ? 'apple应用商店' : '安卓应用商店'

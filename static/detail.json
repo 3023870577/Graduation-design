@@ -15,50 +15,56 @@
         {
           "title": "上午场",
           "desc": "比较贵",
-          "price": "36.8",
           "show": true,
           "hasMore": true,
           "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           },{
             "name": "Qunar2自营",
-            "show": false
+            "show": false,
+            "price": "36.8"
           }]
         }, {
           "title": "下午场",
           "desc": "比较好",
-          "price": "32.8",
           "hasMore": true,
           "show": true,
            "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           },{
             "name": "Qunar2自营",
-            "show": false
+            "show": false,
+            "price": "36.8"
           }]
         },{
           "title": "午夜场",
           "desc": "比较好",
-          "price": "12.8",
           "hasMore": true,
           "show": false,
            "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "12.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "12.8"
           },{
             "name": "Qunar2自营",
-            "show": false
+            "show": false,
+            "price": "12.8"
           }]
         }]
     },{
@@ -68,47 +74,52 @@
         {
           "title": "上午场",
           "desc": "比较贵",
-          "price": "36.8",
           "show": true,
           "hasMore": false,
           "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           }]
         }, {
           "title": "下午场",
           "desc": "比较好",
-          "price": "32.8",
           "hasMore": true,
           "show": true,
            "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "32.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "32.8"
           },{
             "name": "Qunar2自营",
-            "show": false
+            "show": false,
+            "price": "32.8"
           }]
         },{
           "title": "午夜场",
           "desc": "比较好",
-          "price": "12.8",
           "hasMore": true,
           "show": false,
            "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "12.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "12.8"
           },{
             "name": "Qunar2自营",
-            "show": false
+            "show": false,
+            "price": "12.8"
           }]
         }]
     },{
@@ -118,31 +129,34 @@
         {
           "title": "上午场",
           "desc": "比较贵",
-          "price": "36.8",
           "hasMore": false,
           "show": true,
           "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           },{
             "name": "Qunar2自营",
-            "show": true
+            "show": true,
+            "price": "36.8"
           }]
         }, {
           "title": "下午场",
           "desc": "比较好",
-          "price": "32.8",
           "hasMore": true,
           "show": true,
            "suppliers": [{
             "name": "Qunar自营",
-            "show": true
+            "show": true,
+            "price": "32.8"
           },{
             "name": "Qunar1自营",
-            "show": true
+            "show": true,
+            "price": "32.8"
           },{
             "name": "Qunar2自营",
-            "show": false
+            "show": false,
+            "price": "32.8"
           }]
         }]
     }]

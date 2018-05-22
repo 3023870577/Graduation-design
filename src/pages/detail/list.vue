@@ -3,24 +3,30 @@
     <div v-for="(area, index) in ticketList" :key="index">
       <h3 class="title border-bottom">{{area.title}}</h3>
       <ul class="area-list">
-        <li class="list-item"
+        <li class="list-item border-bottom"
             v-for="(ticket, tIndex) in area.list"
             :key="tIndex"
             v-show="ticket.show">
-          {{ticket.title}} - {{ticket.desc}} - {{ticket.price}}
+          {{ticket.title}} - {{ticket.desc}}
           <div>
             <div v-for="(supplier, sIndex) in ticket.suppliers"
-                 v-show="supplier.show" :key="supplier.id">
-              {{supplier.name}}
+                 v-show="supplier.show" :key="supplier.id"
+                 class="list-text-con border-bottom">
+              <div class="list-text">{{supplier.name}}</div>
+              <div class="list-price-con">
+                <div class="list-price">¥{{supplier.price}}</div>
+                <div class="buy-btn">预定</div>
+              </div>
             </div>
-            <div v-if="ticket.hasMore"
-                 @click="handleSuppplierClick(index, tIndex, $event)">更多供应商
+            <div v-if="ticket.hasMore" class="more-store border-bottom"
+                 @click="handleSuppplierClick(index, tIndex, $event)">
+              更多供应商
             </div>
           </div>
         </li>
       </ul>
       <div class="more" v-if="area.hasMore" @click="handleClick(index, $event)">
-        点击查看更多(测试公钥)
+        点击查看更多
       </div>
     </div>
   </div>
@@ -69,8 +75,27 @@
   .area-list
     padding: 0 .2rem
     .list-item
+      display flex
+      flex-direction column
+      justify-content center
+      align-items space-between
       line-height: .6rem
-    .more
-      line-height: .6rem
-      text-align: center
+      .list-text-con
+        display flex
+        justify-content space-between
+        align-items center
+        .list-price-con
+          display flex
+          justify-content space-around
+          align-items center
+          .buy-btn
+            margin-left .2rem
+            background #ffab1e
+            padding .25rem .3rem
+            border-radius .1rem
+            color #ffffff
+            line-height 0
+  .more
+    line-height: .6rem
+    text-align: center
 </style>
