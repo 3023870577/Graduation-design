@@ -19,7 +19,8 @@
           <div class="title border-topbottom" ref="hotcity">热门城市</div>
           <div class="content">
             <div class="button"
-                 v-for="item in hotcity"
+                 v-for="(item, index) in hotcity"
+                 :key="index"
                  @click="handleCityClick(item.city)">
               <div class="button-text"
                    :class="{'button-active': item.city === city}">
@@ -34,7 +35,8 @@
           <div class="title border-topbottom">{{key}}</div>
           <div class="content">
             <div class="content-item border-bottom"
-                 v-for="innerItem in item"
+                 v-for="(innerItem, index) in item"
+                 :key="index"
                  @click="handleCityClick(innerItem.name)">
                {{innerItem.name}}
             </div>

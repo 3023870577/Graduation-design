@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="sidebar-list" ref="list">
       <div class="sidebar-item"
-           v-for="(item, index) in alphabet"
+           v-for="(item) in alphabet"
            :key="item"
            @touchstart="handleTouchStart(item)"
            @touchmove="handleTouchMove">

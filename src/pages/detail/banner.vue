@@ -3,6 +3,7 @@
     <div class="banner" @click="showGallary">
       <img class="banner-image" :src="bannerImg" />
     </div>
+    <div class="back-con" @click="handleDetailClick($event)"><div class="back iconfont">&#xe624;</div></div>
     <gallary v-show="show"
              :imgList="imgList"
              @close="handleGallaryClose"></gallary>
@@ -31,6 +32,10 @@
       },
       handleGallaryClose () {
         this.show = false
+      },
+      handleDetailClick (e) {
+        console.log(e)
+        this.$router.go(-1)
       }
     }
   }
@@ -43,4 +48,19 @@
     padding-bottom: 55%
     .banner-image
       width: 100%
+  .back-con
+    position absolute 
+    top .2rem
+    left .2rem
+    width .5rem
+    height .5rem
+    display flex
+    justify-content center
+    align-items center
+    z-index 2
+    border-radius .25rem
+    background #ffffff
+    .back
+      width .4rem
+      height .4rem
 </style>

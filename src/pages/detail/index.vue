@@ -7,6 +7,7 @@
     </banner>
     <detail-header></detail-header>
     <list :list="ticketList"></list>
+    <comment :comment="userComment"></comment>
     <download v-show="showDownload">download</download>
   </div>
 </template>
@@ -17,6 +18,7 @@
   import Download from 'components/common/download/'
   import List from './list'
   import DetailHeader from './header'
+  import Comment from './comment'
   import axios from 'axios'
   export default {
     name: 'detail',
@@ -28,6 +30,7 @@
         bannerImg: '',
         imgList: [],
         ticketList: [],
+        userComment: [],
         download: false
       }
     },
@@ -38,7 +41,8 @@
       Banner,
       Download,
       List,
-      DetailHeader
+      DetailHeader,
+      Comment
     },
     created () {
       this.getDetailInfo()
@@ -60,16 +64,19 @@
         .then(this.handleGetDetailSucc.bind(this))
         .catch(this.handleGetDetailErr.bind(this))
       },
+
       handleGetDetailSucc (res) {
         res && (res = res.data)
         if (res && res.ret && res.data) {
           this.bannerImg = res.data.bannerImg
           this.imgList = res.data.imgList
           this.ticketList = res.data.ticketList
+          this.userComment = res.data.commentList
         } else {
           this.handleGetDetailErr()
         }
       },
+
       handleGetDetailErr () {
         console.log('error')
       }
@@ -77,6 +84,5 @@
   }
 </script>
 
-<style lang="stylus" scoped>
-
+<style lang="stylus" scoped>    
 </style>

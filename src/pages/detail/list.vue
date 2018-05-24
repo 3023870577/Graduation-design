@@ -7,25 +7,24 @@
             v-for="(ticket, tIndex) in area.list"
             :key="tIndex"
             v-show="ticket.show">
-          {{ticket.title}} - {{ticket.desc}}
           <div>
-            <div v-for="(supplier, sIndex) in ticket.suppliers"
+            <div v-for="(supplier) in ticket.suppliers"
                  v-show="supplier.show" :key="supplier.id"
-                 class="list-text-con border-bottom">
-              <div class="list-text">{{supplier.name}}</div>
+                 class="list-text-con border-top">
+              <div class="list-text">【{{ticket.title}}】{{supplier.name}}</div>
               <div class="list-price-con">
                 <div class="list-price">¥{{supplier.price}}</div>
                 <div class="buy-btn">预定</div>
               </div>
             </div>
-            <div v-if="ticket.hasMore" class="more-store border-bottom"
+            <div v-if="ticket.hasMore" class="more-store border-top"
                  @click="handleSuppplierClick(index, tIndex, $event)">
               更多供应商
             </div>
           </div>
         </li>
       </ul>
-      <div class="more" v-if="area.hasMore" @click="handleClick(index, $event)">
+      <div class="more border-bottom" v-if="area.hasMore" @click="handleClick(index, $event)">
         点击查看更多
       </div>
     </div>
@@ -70,7 +69,7 @@
 
 <style lang="stylus" scoped>
   .title
-    line-height: .7rem
+    line-height: .75rem
     padding: 0 .4rem
   .area-list
     padding: 0 .2rem
@@ -79,7 +78,7 @@
       flex-direction column
       justify-content center
       align-items space-between
-      line-height: .6rem
+      line-height: .7rem
       .list-text-con
         display flex
         justify-content space-between
@@ -91,11 +90,13 @@
           .buy-btn
             margin-left .2rem
             background #ffab1e
-            padding .25rem .3rem
+            padding .25rem .2rem
             border-radius .1rem
             color #ffffff
             line-height 0
+      .more-store
+        padding 0 .2rem
   .more
-    line-height: .6rem
+    line-height: .7rem
     text-align: center
 </style>

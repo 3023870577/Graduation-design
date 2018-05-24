@@ -8,7 +8,7 @@
         <li class="search-item border-bottom" v-show="!filterResult.length">
           无匹配城市
         </li>
-        <li class="search-item border-bottom" v-for="item in filterResult">
+        <li class="search-item border-bottom" v-for="(item, index) in filterResult" :key="index">
           {{item.name}}
         </li>
       </ul>
