@@ -3,7 +3,7 @@
     <div class="banner" @click="showGallary">
       <img class="banner-image" :src="bannerImg" />
     </div>
-    <div class="back-con" @click="handleDetailClick($event)"><div class="back iconfont">&#xe624;</div></div>
+    <div class="back-con" @click="handleDetailClick($event)"><div class="back iconfont">&#xe65a;</div></div>
     <gallary v-show="show"
              :imgList="imgList"
              @close="handleGallaryClose"></gallary>
@@ -34,7 +34,6 @@
         this.show = false
       },
       handleDetailClick (e) {
-        console.log(e)
         this.$router.go(-1)
       }
     }

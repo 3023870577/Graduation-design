@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="back iconfont">&#xe624;</div>
+    <div class="back iconfont">&#xe65a;</div>
     <div class="search">
       <div class="search-content">
         <span class="iconfont search-icon">&#xe632;</span>

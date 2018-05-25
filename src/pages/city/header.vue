@@ -3,7 +3,7 @@
     <div class="title">
       <div class="back iconfont"
            @click="handleBackClick">
-         &#xe624;
+         &#xe65a;
       </div>
       城市选择
     </div>

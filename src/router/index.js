@@ -17,5 +17,10 @@ export default new Router({
     name: 'detail',
     component: () => import('pages/detail/index'),
     props: true
+  }, {
+    path: '/comment',
+    name: 'comment',
+    component: () => import('pages/comment/index'),
+    props: true
   }]
 })
