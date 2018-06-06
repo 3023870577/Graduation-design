@@ -15,25 +15,30 @@
       <div class="down iconfont" @click="handleDownClick(index, $event)" ref="down">&#xe62d;</div>
       <div class="up iconfont" @click="handleUpClick(index, $event)" ref="up">&#xe669;</div>
     </div>
-    <router-link to="/comment" class="addCommentBtn">
+    <router-link :to="'/comment/' + detailId" class="addCommentBtn">
       添加评论
     </router-link>
   </div>
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
     name: 'comment',
     props: {
-      comment: Array
+      // comment: Array,
+      detailId: String
     },
     data () {
       return {
+        comment: [],
         showDown: true,
         showUp: false
       }
     },
-    activated () {},
+    activated () {
+      this.getCommentInfo()
+    },
     deactivated () {},
     methods: {
       handleDownClick (index, e) {
@@ -47,6 +52,26 @@
         this.$refs.up[index].style.display = 'none'
         this.$refs.text[index].style.overflow = 'hidden'
         this.$refs.text[index].style.height = 105 + 'px'
+      },
+      getCommentInfo () {
+        axios.get('/api/position/getCommentInfo')
+          .then(this.handleGetCommentInfoSucc.bind(this))
+          .catch(this.handleGetCommentInfoError.bind(this))
+      },
+      handleGetCommentInfoSucc (res) {
+        res && (res = res.data)
+        if (res && res.ret && res.data) {
+          const resFilter = res.data && res.data.filter((item, index) => {
+            return item.detailId === this.detailId
+          })
+          const resFilterd = resFilter
+          this.comment = resFilterd
+        } else {
+          this.handleGetCommentInfoError()
+        }
+      },
+      handleGetCommentInfoError () {
+        console.log('err')
       }
     }
   }

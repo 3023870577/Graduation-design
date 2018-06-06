@@ -13,14 +13,24 @@ export default new Router({
     name: 'city',
     component: () => import('pages/city/index')
   }, {
-    path: '/detail/:sightId',
+    path: '/detail/:detailId',
     name: 'detail',
     component: () => import('pages/detail/index'),
     props: true
   }, {
-    path: '/comment',
+    path: '/comment/:detailId',
     name: 'comment',
     component: () => import('pages/comment/index'),
+    props: true
+  }, {
+    path: '/login',
+    name: 'login',
+    component: () => import('pages/login/index'),
+    props: true
+  }, {
+    path: '/register',
+    name: 'register',
+    component: () => import('pages/register/index'),
     props: true
   }]
 })

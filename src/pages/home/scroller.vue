@@ -4,7 +4,7 @@
       <transition name="loading">
         <div v-show="isLoading" class="loading">正在加载...</div>
       </transition>
-      <router-link class="item" v-for="item in list" :to="'/detail/' + item.id" :key="item.id" tag="div">
+      <router-link class="item" v-for="item in list" :to="'/detail/' + item.detailId" :key="item.id" tag="div">
         <img class="item-img" v-lazy="item.imgUrl" />
         <div class="item-content">
           <p class="item-title">{{item.title}}</p>

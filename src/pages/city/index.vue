@@ -32,12 +32,14 @@
     },
     methods: {
       getListInfo () {
-        axios.get('/api/city.json')
+        axios.get('/api/position/getCityInfo')
           .then(this.handleGetListSucc.bind(this))
           .catch(this.handleGetListErr.bind(this))
       },
       handleGetListSucc (res) {
-        res && (res = res.data)
+        console.log(res)
+        res && (res = res.data.data[0])
+        console.log(res)
         if (res && res.data) {
           res.data.list && (this.list = res.data.list)
           res.data.hotcity && (this.hotcity = res.data.hotcity)

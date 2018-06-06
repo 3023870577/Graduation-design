@@ -1,6 +1,7 @@
 {
   "ret": true,
-  "data": {
+  "data": [{
+    "detailId":"1",
     "bannerImg": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg",
     "imgList": [
       "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_800x800_04f227ef.jpg",
@@ -132,5 +133,138 @@
       "time": "2017-11-12",
       "comment": "不错，很方便，集合时需要打出1个小时的富裕时间，因为从天安门地铁出来安检的太严了，赶上人多的话可能需要1个小时，今天是淡季也排了40分钟才进入天安门区域，导游很专业讲解的也很认真，很愉快的一次故宫之旅。"
     }]
-  }
+  },{
+    "detailId":"2",
+    "bannerImg": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg",
+    "imgList": [
+      "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_800x800_04f227ef.jpg",
+      "http://img1.qunarzz.com/sight/p55/201211/04/fbcab3e5d6479ce893835fbb.jpg_800x800_3f52b8da.jpg",
+      "http://img1.qunarzz.com/wugc/p180/201306/16/7f08e81624346b1693835fbb.jpg_800x800_eb941a31.jpg",
+      "http://img1.qunarzz.com/wugc/p123/201211/19/a2045d091f02b25493835fbb.png_800x800_5e80fcc3.png"
+    ],
+    "ticketList": [{
+      "title": "迪士尼乐园",
+      "hasMore": true,
+      "list": [
+        {
+          "title": "上午场",
+          "desc": "比较贵",
+          "show": true,
+          "hasMore": true,
+          "suppliers": [{
+            "name": "Qunar自营",
+            "show": true,
+            "price": "136.8"
+          },{
+            "name": "Qunar1自营",
+            "show": true,
+            "price": "136.8"
+          },{
+            "name": "Qunar2自营",
+            "show": false,
+            "price": "136.8"
+          }]
+        }, {
+          "title": "下午场",
+          "desc": "比较好",
+          "hasMore": true,
+          "show": true,
+           "suppliers": [{
+            "name": "Qunar自营",
+            "show": true,
+            "price": "136.8"
+          },{
+            "name": "Qunar1自营",
+            "show": true,
+            "price": "136.8"
+          },{
+            "name": "Qunar2自营",
+            "show": false,
+            "price": "136.8"
+          }]
+        },{
+          "title": "午夜场",
+          "desc": "比较好",
+          "hasMore": true,
+          "show": false,
+           "suppliers": [{
+            "name": "Qunar自营",
+            "show": true,
+            "price": "112.8"
+          },{
+            "name": "Qunar1自营",
+            "show": true,
+            "price": "112.8"
+          },{
+            "name": "Qunar2自营",
+            "show": false,
+            "price": "112.8"
+          }]
+        }]
+    },{
+      "title": "迪士尼乐园",
+      "hasMore": true,
+      "list": [
+        {
+          "title": "上午场",
+          "desc": "比较贵",
+          "show": true,
+          "hasMore": false,
+          "suppliers": [{
+            "name": "Qunar自营",
+            "show": true,
+            "price": "136.8"
+          },{
+            "name": "Qunar1自营",
+            "show": true,
+            "price": "136.8"
+          }]
+        }, {
+          "title": "下午场",
+          "desc": "比较好",
+          "hasMore": true,
+          "show": true,
+           "suppliers": [{
+            "name": "Qunar自营",
+            "show": true,
+            "price": "132.8"
+          },{
+            "name": "Qunar1自营",
+            "show": true,
+            "price": "132.8"
+          },{
+            "name": "Qunar2自营",
+            "show": false,
+            "price": "132.8"
+          }]
+        },{
+          "title": "午夜场",
+          "desc": "比较好",
+          "hasMore": true,
+          "show": false,
+           "suppliers": [{
+            "name": "Qunar自营",
+            "show": true,
+            "price": "112.8"
+          },{
+            "name": "Qunar1自营",
+            "show": true,
+            "price": "112.8"
+          },{
+            "name": "Qunar2自营",
+            "show": false,
+            "price": "112.8"
+          }]
+        }]
+    }],
+    "commentList": [{
+      "username": "魏升高",
+      "time": "2017-10-10",
+      "comment": "首先说认真的非常非常非常非常的多，我特意买的星期一的票，结果并无卵用。之前看的一直是270多的尊享卡今天需要660才可以，本来马上排队入园了，门口被黄牛耽误了半个小时又，那边的黄牛基本就是带着你跑来跑去赶项目，我觉得本来是出来游玩了，不想变成赶集，所以还是在app买了尊享卡，可以一边逛吃一边玩，然鹅还是失误了，因为园区比较大，攻略没做好，走了很多冤枉路，导致后面根本没有精力再玩别的，创极速光轮应该算是最刺激的了，其他的个人感觉没啥意思，适合小孩子玩玩，比起飞跃地平线我还是更喜欢加勒比海盗，真的是超级好玩，用完fp还想再玩可是队伍真的太壮观了，雷鸣山漂流我抢到一张免费fp所以一共玩了两次，我和老公都觉得没啥意思，而且也没有想评论说的湿透啊啥的，最多也就是溅几滴水的程度吧，小飞侠天空奇遇也蛮好玩的，里面一进去就和真的一样，一天下来也就玩了尊享卡里面的项目，其他实在是人太多了，看着就累，排不下去。好可惜没有和米妮黛丝拍到照片～猪肋排饭挺好吃的，就是那个脆骨让我这打了瘦脸针的腮帮子酸了很久～"
+    },{
+      "username": "逗比魏",
+      "time": "2017-11-12",
+      "comment": "在网上预订的联票，到园区拿身份证刷票就好了，介绍一下景区的吃饭和商场吧： 一）园区里都有直饮水，都是凉水~可以用杯子接水，若想要喝热水可以去里面的餐厅哟，我们在城堡迎宾阁旁边的餐厅接热水，他们家有好几个接水桶很方便。吃饭的话建议去迪士尼小镇吃，虽然也不便宜起码是能花园区相同的钱吃到饭，吃饱的，园区里一个卷饼65，一个热狗55，我个人吃一个饼子当中饭肯定是吃不饱的，而且我也不想大冬天喝凉水~去小镇可以随便点菜，套餐都有的~豪儿们可以在园区随意潇洒。（二）商店：大家可以去园区商店买自己喜欢的东西和换徽章买徽章，个人觉得米奇大街的商店和迪士尼小镇的迪士尼市集较大，东西多且全，可以逛逛。"
+    }]
+  }]
 }

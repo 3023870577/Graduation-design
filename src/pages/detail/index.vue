@@ -7,7 +7,7 @@
     </banner>
     <detail-header></detail-header>
     <list :list="ticketList"></list>
-    <comment :comment="userComment"></comment>
+    <comment :comment="userComment" :detailId="detailId"></comment>
     <download v-show="showDownload">download</download>
   </div>
 </template>
@@ -23,7 +23,7 @@
   export default {
     name: 'detail',
     props: {
-      sightId: [Number, String]
+      detailId: [Number, String]
     },
     data () {
       return {
@@ -45,20 +45,21 @@
       Comment
     },
     created () {
+      console.log('详情页')
       this.getDetailInfo()
     },
     watch: {
-      sightId () {
-        if (this.sightId) {
+      detailId () {
+        if (this.detailId) {
           this.getDetailInfo()
         }
       }
     },
     methods: {
       getDetailInfo () {
-        axios.get('/api/detail.json', {
+        axios.get('/api/position/getDetailInfo', {
           params: {
-            id: this.sightId
+            id: this.detailId
           }
         })
         .then(this.handleGetDetailSucc.bind(this))
@@ -66,12 +67,20 @@
       },
 
       handleGetDetailSucc (res) {
-        res && (res = res.data)
+        console.log(res)
+        res && (res = res.data.data[0])
+        console.log(res)
+        console.log(this.detailId)
         if (res && res.ret && res.data) {
-          this.bannerImg = res.data.bannerImg
-          this.imgList = res.data.imgList
-          this.ticketList = res.data.ticketList
-          this.userComment = res.data.commentList
+          const resFilter = res.data && res.data.filter((item, index) => {
+            return item.detailId === this.detailId
+          })
+          const resFilterd = resFilter[0]
+          console.log(resFilterd)
+          this.bannerImg = resFilterd.bannerImg
+          this.imgList = resFilterd.imgList
+          this.ticketList = resFilterd.ticketList
+          this.userComment = resFilterd.commentList
         } else {
           this.handleGetDetailErr()
         }
