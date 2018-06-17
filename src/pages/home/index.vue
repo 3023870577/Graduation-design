@@ -67,6 +67,7 @@
       },
       handleDataError () {
         console.log('error')
+        console.log("123")
       },
       getUserInfo () {
         console.log('获取用户信息')

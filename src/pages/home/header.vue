@@ -1,6 +1,9 @@
 <template>
   <div class="header">
-    <div class="back iconfont">&#xe65a;</div>
+    <router-link to="/login">
+      <div class="back" ref="down">登录</div>
+    </router-link>
+      <div class="user" ref="up">{{user}}</div>
     <div class="search">
       <div class="search-content">
         <span class="iconfont search-icon">&#xe632;</span>
@@ -19,8 +22,32 @@
   import { mapState } from 'vuex'
   export default {
     name: 'index-header',
+    data () {
+      return {
+        user:""
+      }
+    },
     computed: {
       ...mapState(['city'])
+    },
+    methods: {
+      
+    },
+    mounted () {
+      const userInfo = JSON.parse(localStorage.userInfo).email
+      if (userInfo) {
+        this.user = userInfo
+        this.$refs.down.style.display = 'none'
+        this.$refs.up.style.display = 'block'
+      } else {
+        alert("登录失败")
+        this.user = "登录"
+        this.$refs.up.style.display = 'none'
+        this.$refs.down.style.display = 'block'
+      }
+    },
+    beforeDestroy () {
+      localStorage.clear()
     }
   }
 </script>
@@ -32,12 +59,25 @@
     height: .88rem
     background: $bgColor
     .back
-      width: .8rem
+      max-width: 2rem
       line-height: .88rem
       text-align: center
-      font-weight: bold
-      font-size: .44rem
+      font-size: .35rem
       color: #fff
+      padding 0 .1rem
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+    .user 
+      display none
+      max-width: 2rem
+      line-height: .88rem
+      text-align: center
+      font-size: .35rem
+      color: #fff
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
     .search
       flex: 1
       .search-icon

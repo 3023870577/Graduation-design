@@ -20,6 +20,7 @@
     name: 'login-index',
     data () {
       return {
+        userInfo: ""
       }
     },
     components: {
@@ -31,6 +32,7 @@
       },
       handleLogin () {
         const listInfo = this.$refs.list.getLoginInfo()
+        this.userInfo = listInfo
         if (!(listInfo.isvalidUsername && listInfo.isvalidPassword)) {
           this.$refs.list.setError(true)
         } else {
@@ -48,17 +50,16 @@
         if (res.data.login) {
           this.$refs.list.setActive(false)
           console.log('登陆成功')
-         
+          window.localStorage.setItem('userInfo', JSON.stringify({
+            email: this.userInfo.username,
+            password: this.userInfo.password
+          }))
           this.$router.push('/')
         } else {
           this.$refs.list.setActive(true)
         }
       },
       handleLoginFail () {
-        window.localStorage.setItem('loginInfo', JSON.stringify({
-          email: listInfo.username,
-          password: listInfo.password
-        }));
         alert('fail')
       }
     }

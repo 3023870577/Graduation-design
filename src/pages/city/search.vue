@@ -8,7 +8,7 @@
         <li class="search-item border-bottom" v-show="!filterResult.length">
           无匹配城市
         </li>
-        <li class="search-item border-bottom" v-for="(item, index) in filterResult" :key="index">
+        <li class="search-item border-bottom" v-for="(item, index) in filterResult" :key="index" @click="handleCityClick">
           {{item.name}}
         </li>
       </ul>
@@ -69,6 +69,9 @@
         } else {
           this.showList = false
         }
+      },
+      handleCityClick () {
+        this.$router.push('/')
       }
     },
     mounted () {

@@ -9,22 +9,6 @@
         <span class="list-tit">密码</span>
         <input type="password" class="list-item" placeholder="请输入密码" v-model="password">
       </div>
-      <div class="list checkbox">
-        <div class="list-checkbox-content">
-          <input type="checkbox" class="list-checkbox" v-model="remember">
-          <div class="checkbox-text">记住我的密码</div>
-        </div>
-        <div class="list-checkbox-content">
-          <input type="checkbox" class="list-checkbox" v-model="autoLogin">
-          <div class="checkbox-text">自动登录</div>
-        </div>
-      </div>
-      <div class="list forget-password">
-        <span class="forget-tit">忘记密码?</span>
-      </div>
-      <div class="list forget-password">
-        <span id="qqLoginBtn"></span>
-      </div>
       <div class="list list-login-err" v-show="this.errinfo">账号密码不符合要求</div>
       <router-link to="/register" class="list list-login-active" v-show="this.activedInfo">用户未注册,请前往注册</router-link>
     </div>  

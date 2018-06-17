@@ -14,7 +14,6 @@
               <div class="list-text">【{{ticket.title}}】{{supplier.name}}</div>
               <div class="list-price-con">
                 <div class="list-price">¥{{supplier.price}}</div>
-                <div class="buy-btn">预定</div>
               </div>
             </div>
             <div v-if="ticket.hasMore" class="more-store border-top"

@@ -34,8 +34,10 @@
       },
       handleShareClick () {
         let commentValue = this.$refs.text.value
+        const userInfo = JSON.parse(localStorage.userInfo).email
         axios.post('/api/position/addComment', {
           id: this.detailId,
+          username: userInfo,
           comment: commentValue
         })
         .then(this.handleAddCommentSucc.bind(this))
@@ -46,6 +48,7 @@
       },
       handleAddCommentErr () {
         console.log('err')
+        console.log("123")
       }
     }
   }

@@ -18,7 +18,8 @@
     name: 'register-index',
     data () {
       return {
-        registerFlag: false
+        registerFlag: false,
+        userInfo: ""
       }
     },
     components: {
@@ -31,6 +32,7 @@
 
       handleRegisterClick () {
         const Info = this.$refs.list.getRegisterInfo()
+        this.userInfo = Info
         console.log(Info.isValidEmail)
         if (Info.isValidEmail) {
           this.postRegisterInfo(Info)

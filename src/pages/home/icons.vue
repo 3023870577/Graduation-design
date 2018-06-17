@@ -5,7 +5,7 @@
                   :key="index">
       <div class="icons-list">
         <div v-for="item in page" :key="item.id" class="icons-item">
-          <img class="icon-img" :src="item.imgUrl" />
+          <router-link :to="'/detail/'+item.link"><img class="icon-img" :src="item.imgUrl" /></router-link>
           <p class="icon-title">{{item.title}}</p>
         </div>
       </div>

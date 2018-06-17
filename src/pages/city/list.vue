@@ -81,6 +81,7 @@
             text: i
           })
         }
+        console.log(this.list)
         return arr
       },
       ...mapState({
