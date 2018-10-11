@@ -20,7 +20,7 @@
 
   export default {
     name: 'index',
-    data () {
+    data() {
       return {
         sliders: [],
         icons: [],
